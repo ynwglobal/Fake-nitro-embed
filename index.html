@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- ⚠️ FAKE NITRO EMBED META TAGS ⚠️ -->
-    <meta property="og:title" content="A WILD GIFT APPEARS" />
-    <meta property="og:description" content="NITRO" />
-    <meta property="og:image" content="https://vxncent.is-ne.at/7UrC2oS0s" />
+    <!-- We use zero-width spaces or spaces to hide the title/description text so the image stands out -->
+    <meta property="og:title" content="&nbsp;" />
+    <meta property="og:description" content="&nbsp;" />
+    <meta property="og:image" content="https://vxncent.is-ne.at/7UrVPcHPM.png" />
     <meta property="og:image:width" content="500" />
     <meta property="og:image:height" content="500" />
+    <meta property="og:type" content="website" />
     <meta name="theme-color" content="#FF73FA" />
     <meta name="twitter:card" content="summary_large_image" />
     <!-- End of Meta Tags -->
@@ -35,9 +37,11 @@
             gap: 16px;
             font-family: 'gg sans', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
             color: #dcddde;
+            /* Background gradient to match the fake nitro */
+            background: linear-gradient(135deg, #3b2d4d 0%, #3b2d4d 100%);
         }
         .discord-embed-title {
-            font-size: 12px;
+            font-size: 14px;
             font-weight: 700;
             text-transform: uppercase;
             color: #dcddde;
@@ -45,26 +49,41 @@
             letter-spacing: 0.02em;
         }
         .discord-embed-desc {
-            font-size: 20px;
-            font-weight: 700;
+            font-size: 24px;
+            font-weight: 800;
             color: #ffffff;
             margin-bottom: 16px;
             line-height: 1.2;
         }
+        .discord-button-container {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
         .discord-button {
-            background-color: #4f545c;
+            background-color: rgba(255, 255, 255, 0.1);
             color: #ffffff;
             font-size: 14px;
             font-weight: 500;
             padding: 8px 16px;
-            border-radius: 3px;
-            width: 100%;
+            border-radius: 4px;
+            flex: 1;
             text-align: center;
+            text-decoration: none;
             transition: background-color 0.17s ease;
-            cursor: not-allowed;
+            display: inline-block;
         }
         .discord-button:hover {
-            background-color: #5d6269;
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+        .discord-icon-btn {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 8px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #b9bbbe;
         }
     </style>
 </head>
@@ -87,11 +106,13 @@
             <div class="bg-gray-800 rounded-xl p-6 border border-gray-700 shadow-lg">
                 <h2 class="text-2xl font-semibold text-white mb-4">1. The Fake Nitro Embed</h2>
                 <p class="text-gray-400 mb-6">
-                    When you paste the URL of <strong>this exact page</strong> into Discord, it will read the hidden metadata in the `<head>` and render it as a fake Nitro gift.
+                    When you paste the URL of <strong>this exact page</strong> into Discord, it will read the hidden metadata in the `<head>` and render it as a fake Nitro gift. 
+                    <br><br>
+                    <span class="text-yellow-400 text-sm">Note: Standard link previews cannot show a URL-less interactive button. To hide the URL, you must use the generator below.</span>
                 </p>
 
                 <!-- Visual Preview -->
-                <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">Visual Preview</h3>
+                <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">Visual Preview (Target)</h3>
                 <div class="bg-[#36393f] p-4 rounded-lg flex items-start gap-4 mb-6 shadow-inner">
                     <!-- Fake Avatar -->
                     <div class="w-10 h-10 rounded-full bg-indigo-500 flex-shrink-0 flex items-center justify-center text-white font-bold text-lg">U</div>
@@ -104,13 +125,23 @@
                         <!-- The Exact Embed Replica -->
                         <div class="discord-embed mt-1">
                             <div class="min-w-0">
-                                <div class="discord-embed-title">A WILD GIFT APPEARS</div>
+                                <div class="discord-embed-title text-gray-300">A WILD GIFT APPEARS</div>
                                 <div class="discord-embed-desc">NITRO</div>
-                                <div class="discord-button">Accept</div>
+                                
+                                <div class="discord-button-container">
+                                    <!-- THIS IS THE RICK ROLL LINK -->
+                                    <a href="https://discord.com/vanityurl/dotcom/steakpants/flour/flower/index11.html" target="_blank" class="discord-button">Accept</a>
+                                    <div class="discord-icon-btn">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M14 3v2h3.586l-9.293 9.293 1.414 1.414L19 6.414V10h2V3h-7z"/><path d="M5 5h6V3H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-6h-2v6H5V5z"/></svg>
+                                    </div>
+                                    <div class="discord-icon-btn">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
+                                    </div>
+                                </div>
                             </div>
-                            <!-- Your hosted image -->
+                            <!-- Your hosted image (Nitro Logo) -->
                             <div>
-                                <img src="https://vxncent.is-ne.at/7UrC2oS0s" alt="Nitro Gift" class="w-[80px] h-[80px] rounded-lg object-cover">
+                                <img src="https://vxncent.is-ne.at/7UrVPcHPM.png" alt="Nitro Gift" class="w-[80px] h-[80px] rounded-lg object-cover">
                             </div>
                         </div>
                         
@@ -123,7 +154,7 @@
                     <li>Go to <a href="https://discord.jtw.sh/gen" target="_blank" class="text-indigo-400 hover:text-indigo-300 underline">discord.jtw.sh/gen</a>.</li>
                     <li>Paste your URL and generate the mask link.</li>
                     <li>Paste the generated text into a Discord chat.</li>
-                    <li><strong>Note:</strong> The "Accept" button is a visual illusion. Discord does not allow custom clickable buttons inside link previews.</li>
+                    <li><strong>Note:</strong> Because Discord caches images, it might take a few minutes to update. The button in the actual Discord embed will just be the image, not clickable.</li>
                 </ol>
             </div>
         </section>
@@ -346,7 +377,7 @@
             } catch (error) {
                 output.textContent = `Error: ${error.message}\n\nNote: This is not a cors error the api is likley temporarily down or server is encountering technical difficulties.`;
                 statusBadge.classList.remove('hidden');
-                statusBadge.textContent = 'Network/CORS Error';
+                statusBadge.textContent = 'temporarily down / technical difficultie';
                 statusBadge.classList.add('bg-red-900', 'text-red-300');
             } finally {
                 btn.disabled = false;
