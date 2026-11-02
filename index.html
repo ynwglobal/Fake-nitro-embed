@@ -304,7 +304,7 @@
                 output.textContent = JSON.stringify(data, null, 2);
                 
             } catch (error) {
-                output.textContent = `Error: ${error.message}\n\nNote: This is not a cors error the api is likley down or server is experiencing technical difficulties.`;
+                output.textContent = `Error: ${error.message}\n\nNote: This is not a cors error the api is likley temporarily down or server is encountering technical difficulties.`;
                 statusBadge.classList.remove('hidden');
                 statusBadge.textContent = 'Network Error';
                 statusBadge.classList.add('bg-red-900', 'text-red-300');
