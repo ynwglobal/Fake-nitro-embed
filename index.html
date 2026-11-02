@@ -1,6 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="dark">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ⚠️ FAKE NITRO EMBED META TAGS ⚠️ -->
     <meta property="og:title" content="A WILD GIFT APPEARS" />
     <meta property="og:description" content="NITRO" />
     <meta property="og:image" content="https://vxncent.is-ne.at/7UrC2oS0s" />
@@ -8,7 +12,307 @@
     <meta property="og:image:height" content="500" />
     <meta name="theme-color" content="#FF73FA" />
     <meta name="twitter:card" content="summary_large_image" />
+    <!-- End of Meta Tags -->
+
+    <title>Fake Nitro Embed & API Tester</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom scrollbar for the code block */
+        pre::-webkit-scrollbar { width: 8px; height: 8px; }
+        pre::-webkit-scrollbar-track { background: #1e1e1e; }
+        pre::-webkit-scrollbar-thumb { background: #4b5563; border-radius: 4px; }
+        pre::-webkit-scrollbar-thumb:hover { background: #6b7280; }
+        
+        /* Discord Embed Styling */
+        .discord-embed {
+            border-left: 4px solid #FF73FA;
+            background-color: #2f3136;
+            border-radius: 4px;
+            max-width: 432px;
+            padding: 16px;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 16px;
+            font-family: 'gg sans', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            color: #dcddde;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-gray-900 text-gray-200 font-sans antialiased min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-gray-800 border-b border-gray-700 py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-3xl font-bold text-white flex items-center gap-3">
+                <span class="text-red-500">⚠️</span> Fake Nitro Embed & API Tester
+            </h1>
+            <p class="mt-2 text-gray-400">This page generates a fake Discord Nitro embed via Open Graph tags and provides a live testing environment for the Traffic Capture & Search API.</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid grid-cols-1 lg:grid-cols-2 gap-10">
+        
+        <!-- Left Column: Fake Embed Instructions -->
+        <section class="space-y-6">
+            <div class="bg-gray-800 rounded-xl p-6 border border-gray-700 shadow-lg">
+                <h2 class="text-2xl font-semibold text-white mb-4">1. The Fake Nitro Embed</h2>
+                <p class="text-gray-400 mb-6">
+                    When you paste the URL of <strong>this exact page</strong> into Discord, it will read the hidden metadata in the `<head>` and render it as a fake Nitro gift.
+                </p>
+
+                <!-- Visual Preview -->
+                <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">Visual Preview</h3>
+                <div class="bg-[#36393f] p-4 rounded-lg flex items-start gap-4 mb-6">
+                    <!-- Fake Avatar -->
+                    <div class="w-10 h-10 rounded-full bg-indigo-500 flex-shrink-0 flex items-center justify-center text-white font-bold">U</div>
+                    <div class="flex-1">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-white font-medium">User</span>
+                            <span class="text-xs text-gray-400">Today at 7:29 AM</span>
+                        </div>
+                        <!-- The Embed -->
+                        <div class="discord-embed">
+                            <div>
+                                <p class="text-xs font-bold text-gray-400 mb-1 uppercase">A Wild Gift Appears</p>
+                                <p class="text-xl font-bold text-white mb-4">NITRO</p>
+                                <button class="bg-[#4f545c] hover:bg-[#5d6269] text-white text-sm font-medium py-1 px-4 rounded transition-colors w-full mb-2">Accept</button>
+                            </div>
+                            <div class="w-20 h-20 rounded-lg bg-gradient-to-br from-pink-400 to-purple-500 flex items-center justify-center">
+                                <!-- Nitro Icon Placeholder -->
+                                <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">How to use this</h3>
+                <ol class="list-decimal list-inside space-y-2 text-gray-300 text-sm">
+                    <li>Copy the URL of this hosted page.</li>
+                    <li>Go to <a href="https://discord.jtw.sh/gen" target="_blank" class="text-indigo-400 hover:text-indigo-300 underline">discord.jtw.sh/gen</a>.</li>
+                    <li>Paste your URL and generate the mask link.</li>
+                    <li>Paste the generated text into a Discord chat.</li>
+                    <li><strong>Note:</strong> The "Accept" button is a visual illusion created by the image itself. It is not clickable inside Discord.</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Right Column: API Tester -->
+        <section class="bg-gray-800 rounded-xl border border-gray-700 shadow-lg flex flex-col h-[80vh]">
+            <div class="p-6 border-b border-gray-700">
+                <h2 class="text-2xl font-semibold text-white">2. API Tester</h2>
+                <p class="text-gray-400 text-sm mt-1">Live testing for <code>https://traffic-capture.globalstats.xyz/</code></p>
+            </div>
+
+            <!-- Tabs -->
+            <div class="flex border-b border-gray-700 px-2 pt-2 bg-gray-900/50">
+                <button onclick="switchTab('search')" class="tab-btn active px-4 py-2 text-sm font-medium rounded-t-lg text-white bg-gray-800 border-t-2 border-indigo-500">Search</button>
+                <button onclick="switchTab('scrape')" class="tab-btn px-4 py-2 text-sm font-medium rounded-t-lg text-gray-400 hover:text-white">Scrape</button>
+                <button onclick="switchTab('capture')" class="tab-btn px-4 py-2 text-sm font-medium rounded-t-lg text-gray-400 hover:text-white">Capture</button>
+                <button onclick="switchTab('research')" class="tab-btn px-4 py-2 text-sm font-medium rounded-t-lg text-gray-400 hover:text-white">Research</button>
+            </div>
+
+            <!-- Form Area -->
+            <div class="p-6 flex-1 overflow-y-auto">
+                <form id="apiForm" onsubmit="handleSubmit(event)" class="space-y-4">
+                    
+                    <!-- Search Form -->
+                    <div id="form-search" class="form-section space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-1">Search Query (q) <span class="text-red-400">*</span></label>
+                            <input type="text" name="q" required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-indigo-500" placeholder="e.g. Discord API">
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-1">Max Results</label>
+                                <input type="number" name="max_results" value="5" min="1" max="100" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-indigo-500">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-1">Region</label>
+                                <select name="region" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-indigo-500">
+                                    <option value="wt-wt">Worldwide (wt-wt)</option>
+                                    <option value="us-en">US (us-en)</option>
+                                    <option value="uk-en">UK (uk-en)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Scrape Form -->
+                    <div id="form-scrape" class="form-section space-y-4 hidden">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-1">Target URL <span class="text-red-400">*</span></label>
+                            <input type="url" name="url" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-indigo-500" placeholder="https://example.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-1">Extraction Format</label>
+                            <select name="extract" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-indigo-500">
+                                <option value="">Raw HTML (Default)</option>
+                                <option value="text">Plain Text</option>
+                                <option value="markdown">Markdown</option>
+                                <option value="main_content">Main Content Only</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Capture Form -->
+                    <div id="form-capture" class="form-section space-y-4 hidden">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-1">Target URL <span class="text-red-400">*</span></label>
+                            <input type="url" name="url" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-indigo-500" placeholder="https://example.com">
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" name="summary_only" id="summary_only" class="rounded bg-gray-900 border-gray-700 text-indigo-500 focus:ring-indigo-500">
+                            <label for="summary_only" class="text-sm text-gray-300">Summary Only (Drop full request arrays)</label>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" name="screenshot" id="screenshot" class="rounded bg-gray-900 border-gray-700 text-indigo-500 focus:ring-indigo-500">
+                            <label for="screenshot" class="text-sm text-gray-300">Capture Screenshot (Base64)</label>
+                        </div>
+                    </div>
+
+                    <!-- Research Form -->
+                    <div id="form-research" class="form-section space-y-4 hidden">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-1">Research Topic <span class="text-red-400">*</span></label>
+                            <input type="text" name="query" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-indigo-500" placeholder="e.g. History of Discord">
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-1">Max Sources</label>
+                                <input type="number" name="max_sources" value="3" min="1" max="10" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-indigo-500">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-1">Depth</label>
+                                <select name="depth" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-indigo-500">
+                                    <option value="quick">Quick</option>
+                                    <option value="normal" selected>Normal</option>
+                                    <option value="deep">Deep</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hidden Input for Endpoint -->
+                    <input type="hidden" id="currentEndpoint" value="/search">
+                    
+                    <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg transition-colors flex justify-center items-center gap-2" id="submitBtn">
+                        Send Request
+                    </button>
+                </form>
+            </div>
+
+            <!-- Response Area -->
+            <div class="border-t border-gray-700 bg-gray-900 rounded-b-xl p-4 flex flex-col h-[40%]">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-400">API Response</h3>
+                    <span id="statusCode" class="text-xs font-mono px-2 py-1 rounded hidden"></span>
+                </div>
+                <pre id="responseOutput" class="text-xs font-mono text-green-400 flex-1 overflow-auto bg-[#1e1e1e] p-4 rounded-lg border border-gray-700">Awaiting request...</pre>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        let currentTab = 'search';
+        const baseUrl = 'https://traffic-capture.globalstats.xyz';
+
+        function switchTab(tab) {
+            currentTab = tab;
+            
+            // Update Tab Styles
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active', 'text-white', 'bg-gray-800', 'border-t-2', 'border-indigo-500');
+                btn.classList.add('text-gray-400');
+            });
+            const activeBtn = document.querySelector(`.tab-btn[onclick="switchTab('${tab}')"]`);
+            activeBtn.classList.remove('text-gray-400');
+            activeBtn.classList.add('active', 'text-white', 'bg-gray-800', 'border-t-2', 'border-indigo-500');
+
+            // Show correct form
+            document.querySelectorAll('.form-section').forEach(el => el.classList.add('hidden'));
+            document.getElementById(`form-${tab}`).classList.remove('hidden');
+
+            // Update Endpoint
+            const endpoints = {
+                'search': '/search',
+                'scrape': '/scrape',
+                'capture': '/capture',
+                'research': '/research'
+            };
+            document.getElementById('currentEndpoint').value = endpoints[tab];
+        }
+
+        async function handleSubmit(e) {
+            e.preventDefault();
+            const form = e.target;
+            const formData = new FormData(form);
+            const endpoint = document.getElementById('currentEndpoint').value;
+            const btn = document.getElementById('submitBtn');
+            const output = document.getElementById('responseOutput');
+            const statusBadge = document.getElementById('statusCode');
+
+            // Basic UI resets
+            btn.disabled = true;
+            btn.innerHTML = 'Sending...';
+            output.textContent = 'Loading...';
+            statusBadge.className = 'text-xs font-mono px-2 py-1 rounded hidden';
+
+            // Build payload
+            const payload = {};
+            for (let [key, value] of formData.entries()) {
+                if (value === '') continue; // Skip empty
+                if (value === 'on') {
+                    payload[key] = true;
+                } else {
+                    payload[key] = value;
+                }
+            }
+
+            // Determine method (Search is GET, others are POST based on spec)
+            let method = 'GET';
+            let url = `${baseUrl}${endpoint}`;
+            
+            if (endpoint === '/search') {
+                const params = new URLSearchParams(payload);
+                url += `?${params.toString()}`;
+            } else {
+                method = 'POST';
+            }
+
+            try {
+                const response = await fetch(url, {
+                    method: method,
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: method === 'POST' ? JSON.stringify(payload) : null
+                });
+
+                // Handle Status
+                statusBadge.classList.remove('hidden');
+                statusBadge.textContent = `HTTP ${response.status}`;
+                if (response.ok) {
+                    statusBadge.classList.add('bg-green-900', 'text-green-300');
+                    statusBadge.classList.remove('bg-red-900', 'text-red-300');
+                } else {
+                    statusBadge.classList.add('bg-red-900', 'text-red-300');
+                    statusBadge.classList.remove('bg-green-900', 'text-green-300');
+                }
+
+                const data = await response.json();
+                output.textContent = JSON.stringify(data, null, 2);
+                
+            } catch (error) {
+                output.textContent = `Error: ${error.message}\n\nNote: This is not a cors error the api is likley down or server is experiencing technical difficulties.`;
+                statusBadge.classList.remove('hidden');
+                statusBadge.textContent = 'Network Error';
+                statusBadge.classList.add('bg-red-900', 'text-red-300');
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = 'Send Request';
+            }
+        }
+    </script>
 </body>
 </html>
